@@ -121,7 +121,7 @@ const typeScale = [
   { name: 'Body LG',  size: '18px', weight: '400', cls: 'text-lg',               sample: 'Párrafo principal con información sobre el producto.' },
   { name: 'Body',     size: '16px', weight: '400', cls: 'text-base',             sample: 'Texto de contenido general con información relevante para el usuario.' },
   { name: 'Body SM',  size: '14px', weight: '400', cls: 'text-sm text-dark-200', sample: 'Texto secundario, breadcrumbs y metadata de productos.' },
-  { name: 'Caption',  size: '12px', weight: '400', cls: 'text-xs text-dark-400', sample: 'Nota legal · Envíos a todo Uruguay · 2024 Eurotech Industrial' },
+  { name: 'Caption',  size: '12px', weight: '400', cls: 'text-xs text-dark-400', sample: 'Nota legal · Envíos a todo Uruguay · 2024 Eurotech' },
 ]
 
 function TypographySection() {

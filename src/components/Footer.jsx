@@ -72,7 +72,7 @@ export default function Footer() {
           {/* Project summary */}
           <div className="grid grid-cols-2 gap-4 text-center md:text-left">
             {[
-              { label: 'Cliente',    value: 'Eurotech Industrial' },
+              { label: 'Cliente',    value: 'Eurotech' },
               { label: 'Año',        value: '2024 – 2025' },
               { label: 'Alcance',    value: 'UX/UI · Design System' },
               { label: 'Tech stack', value: 'WP · WooCommerce · PHP' },
@@ -90,7 +90,7 @@ export default function Footer() {
             <div className="text-dark-500 text-xs font-medium tracking-widest uppercase mb-4">Proyecto</div>
             <img src="/imagenes/eurotech-logo-alone.svg" alt="Eurotech" className="h-10 w-auto mx-auto md:ml-auto" />
             <p className="text-dark-500 text-xs mt-3 max-w-[200px]">
-              Líder en herramientas y equipos industriales en Uruguay
+              Líder en herramientas y equipos en Uruguay
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Footer() {
             © 2025 Neuraz — Todos los derechos reservados
           </p>
           <p className="text-dark-700 text-xs font-mono">
-            Eurotech Industrial · Rediseño UX/UI
+            Eurotech · Rediseño UX/UI
           </p>
         </div>
       </div>

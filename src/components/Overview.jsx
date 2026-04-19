@@ -39,11 +39,11 @@ export default function Overview() {
         <div ref={textRef} className="grid md:grid-cols-2 gap-12 items-start mb-16">
           <div className={`reveal ${textVisible ? 'visible' : ''}`}>
             <h2 className="font-bold text-4xl md:text-5xl leading-tight text-white mb-4">
-              Eurotech Industrial<br />
+              Eurotech<br />
               <span className="text-gradient-red">Rediseñado</span>
             </h2>
             <p className="text-dark-300 text-base leading-relaxed">
-              Eurotech Industrial es la empresa líder en herramientas y equipos industriales de Uruguay y Argentina,
+              Eurotech es la empresa líder en herramientas y equipos de Uruguay y Argentina,
               con más de 40 años de experiencia y presencia en marcas internacionales.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Overview() {
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {[
             { icon: '🎯', title: 'Objetivo', text: 'Unificar la experiencia y mostrar todos los productos desde el inicio, eliminando la barrera de la elección de categoría.' },
-            { icon: '🏭', title: 'Cliente', text: 'Eurotech Industrial — líder en herramientas mecánicas, neumáticas y equipos de refrigeración. Presencia en Uruguay (.uy) y Argentina (.ar).' },
+            { icon: '🏭', title: 'Cliente', text: 'Eurotech — líder en herramientas mecánicas, neumáticas y equipos de refrigeración. Presencia en Uruguay (.uy) y Argentina (.ar).' },
             { icon: '📐', title: 'Alcance', text: 'Diseño completo de UI/UX: home, catálogo, producto, carrito, checkout, cuenta cliente y portal mayorista.' },
           ].map(({ icon, title, text }, i) => {
             const [ref, vis] = useScrollAnimation()

@@ -62,7 +62,7 @@ export default function Hero() {
         >
           <img
             src="/imagenes/eurotech-logo-alone.svg"
-            alt="Eurotech Industrial"
+            alt="Eurotech"
             className="h-16 md:h-24 w-auto mx-auto"
           />
         </div>
