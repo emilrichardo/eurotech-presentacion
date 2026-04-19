@@ -1,0 +1,60 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: '#B31D23',
+        'brand-hover': '#CC2020',
+        'brand-light': '#E53535',
+        'brand-dark': '#8B1519',
+        'brand-glow': 'rgba(179,29,35,0.25)',
+        dark: {
+          950: '#090909',
+          900: '#111111',
+          850: '#161616',
+          800: '#1A1A1A',
+          750: '#1E1E1E',
+          700: '#222222',
+          650: '#282828',
+          600: '#2D2D2D',
+          500: '#3D3D3D',
+          400: '#555555',
+          300: '#888888',
+          200: '#AAAAAA',
+          100: '#DDDDDD',
+          50:  '#F5F5F5',
+        },
+      },
+      fontFamily: {
+        sans:    ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'red-glow':    'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(179,29,35,0.35) 0%, transparent 70%)',
+        'red-glow-sm': 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(179,29,35,0.2) 0%, transparent 70%)',
+        'red-vignette':'radial-gradient(ellipse 120% 80% at 50% 100%, rgba(179,29,35,0.15) 0%, transparent 60%)',
+        'card-shine':  'linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%)',
+      },
+      animation: {
+        'fade-up':     'fadeUp 0.7s ease both',
+        'fade-in':     'fadeIn 0.8s ease both',
+        'slide-left':  'slideLeft 0.7s ease both',
+        'slide-right': 'slideRight 0.7s ease both',
+        'glow':        'glow 3s ease-in-out infinite',
+        'float':       'float 4s ease-in-out infinite',
+        'bar-grow':    'barGrow 1s ease both',
+      },
+      keyframes: {
+        fadeUp:    { from: { opacity: 0, transform: 'translateY(28px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+        fadeIn:    { from: { opacity: 0 }, to: { opacity: 1 } },
+        slideLeft: { from: { opacity: 0, transform: 'translateX(-28px)' }, to: { opacity: 1, transform: 'translateX(0)' } },
+        slideRight:{ from: { opacity: 0, transform: 'translateX(28px)' }, to: { opacity: 1, transform: 'translateX(0)' } },
+        glow:      { '0%,100%': { opacity: 0.4 }, '50%': { opacity: 0.9 } },
+        float:     { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+        barGrow:   { from: { transform: 'scaleX(0)' }, to: { transform: 'scaleX(1)' } },
+      },
+    },
+  },
+  plugins: [],
+}
