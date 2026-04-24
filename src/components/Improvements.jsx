@@ -83,6 +83,51 @@ const improvements = [
   },
 ]
 
+const upcomingInitiatives = [
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <path d="M20 7H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+        <path d="M8 12h8" />
+      </svg>
+    ),
+    eyebrow: 'Desarrollo interno',
+    title: 'Plugins personalizados para la operación comercial',
+    description:
+      'Se definieron extensiones propias para mantener el ecosistema liviano, evitar dependencias externas y adaptar cada flujo a las reglas reales del negocio.',
+    points: [
+      'Gestión de precios mayorista, minorista y pago en efectivo por producto.',
+      'Carga asistida con IA para completar fichas incompletas y acelerar el alta de catálogo.',
+      'Motor de búsqueda apoyado por IA para devolver resultados más relevantes.',
+    ],
+    note:
+      'Estos plugins vivirán dentro del repositorio del tema, facilitando mantenimiento, evolución y continuidad para cualquier desarrollador del equipo.',
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+        <rect x="3" y="4" width="18" height="14" rx="2" />
+        <path d="M7 20h10" />
+        <path d="M9 8h6" />
+        <path d="M7 12h10" />
+      </svg>
+    ),
+    eyebrow: 'Integración regional',
+    title: 'Interfaz central para gestionar Argentina y Uruguay',
+    description:
+      'También se propone una capa de administración que conecte Mercado Libre con los WooCommerce de ambos países para coordinar catálogo, contenido y publicación desde un solo lugar.',
+    points: [
+      'Adapta la información de Mercado Libre al formato requerido por WooCommerce.',
+      'Permite enriquecer productos sin alterar los datos originales del marketplace.',
+      'Centraliza la gestión y el control fino de qué información recibe cada tienda.',
+      'Hace posible personalizar contenido y atributos por país.',
+    ],
+    note:
+      'La interfaz funcionará como puente operativo entre canales, simplificando decisiones locales sin perder consistencia global.',
+  },
+]
+
 export default function Improvements() {
   const [hRef, hVis] = useScrollAnimation()
 
@@ -125,6 +170,50 @@ export default function Improvements() {
                 <div className="text-brand text-xs font-bold tracking-wider uppercase mb-1">{tag}</div>
                 <h3 className="text-white font-semibold text-sm mb-2 leading-snug">{title}</h3>
                 <p className="text-dark-300 text-xs leading-relaxed">{desc}</p>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="mt-14 grid lg:grid-cols-2 gap-6">
+          {upcomingInitiatives.map(({ icon, eyebrow, title, description, points, note }, i) => {
+            const [ref, vis] = useScrollAnimation()
+
+            return (
+              <div
+                key={title}
+                ref={ref}
+                className={`reveal relative overflow-hidden rounded-2xl border border-dark-700 bg-dark-800/80 p-6 md:p-7 ${
+                  vis ? 'visible' : ''
+                }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-brand/10 via-transparent to-transparent pointer-events-none" />
+
+                <div className="relative">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-brand/10 border border-brand/20 text-brand flex items-center justify-center">
+                      {icon}
+                    </div>
+                    <span className="text-brand text-xs font-bold tracking-widest uppercase">{eyebrow}</span>
+                  </div>
+
+                  <h3 className="text-white font-semibold text-xl md:text-2xl leading-tight mb-3">{title}</h3>
+                  <p className="text-dark-200 text-sm leading-relaxed mb-5">{description}</p>
+
+                  <div className="space-y-3 mb-5">
+                    {points.map((point) => (
+                      <div key={point} className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand mt-2.5 shrink-0" />
+                        <p className="text-dark-300 text-sm leading-relaxed">{point}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-4 border-t border-dark-700">
+                    <p className="text-dark-400 text-sm leading-relaxed">{note}</p>
+                  </div>
+                </div>
               </div>
             )
           })}
